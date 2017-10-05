@@ -32,7 +32,12 @@ function getGifs() {
 
 			var emotionImage = $("<img>");
 
-		emotionImage.attr("src", results[i].images.fixed_height.url);
+			// testing if i can add class to gif
+			emotionImage.addClass("gif");
+
+		// animated gif: emotionImage.attr("src", results[i].images.fixed_height.url);
+		// still gif (fixed_height_still)
+		emotionImage.attr("src", results[i].images.fixed_height_still.url);
 
 		gifDiv.append(p);
 		gifDiv.append(emotionImage);
@@ -45,6 +50,24 @@ function getGifs() {
 });
 	
 };
+
+//starting and stopping gif
+//_s = still 
+
+$('body').on('click', '.gif', function() {
+    	var src = $(this).attr("src");
+      if($(this).hasClass('playing')){
+         //stop
+         $(this).attr('src', src.replace(/\.gif/i, "_s.gif"))
+         $(this).removeClass('playing');
+      } else {
+        //play
+        $(this).addClass('playing');
+        $(this).attr('src', src.replace(/\_s.gif/i, ".gif"))
+      }
+    });
+
+
 	
 function renderButtons(){
 	$("#emotionButtons").empty();

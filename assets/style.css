@@ -1,9 +1,25 @@
-#emotion-form {
-	font-size: 16px;
+body {
+	background-color: rgba(0, 0, 0, 0.2);
+}
+
+#form {
+	font-size: 12px;
 	font-family: 'Roboto', sans-serif;
-	text-align: right;
+	
+	padding: 0px 45px 0px 1000px;
 }
 
 #emotionButtons {
 	margin: 10px;
+	font-size: 18px;
+	width: 75%;
+}
+
+#emotions {
+	font-family: 'Roboto', sans-serif;
+	width: 100%;
+}
+
+.gif {
+	
 }
