@@ -3,13 +3,13 @@ var topics = ["angry", "amazed", "awkward", "baffled", "buzzed", "cool", "crazy"
 			"sad", "sassy", "scared", "shocked", "speechless", "stunned", "surprised", "uhh", "wow"];
 
 //Function for getting the GIFs and dumping the GIF in to the div
-// for each button
+// for each button (api key from in-class activities = dc6zaTOxFJmzC)
 
 // $("button").on("click", 
 function getGifs() {
 
 	var emotion = $(this).attr("data-emotion");
-	var queryURL = "https://api.giphy.com/v1/gifs/search?q=" + emotion + "&api_key=dc6zaTOxFJmzC&limit=10";
+	var queryURL = "https://api.giphy.com/v1/gifs/search?q=" + emotion + "&api_key=xSDhFRSUFMLwXYh9s1mgak8bSwErhWBJ&limit=10";
 
 	$.ajax({
 		url: queryURL,
