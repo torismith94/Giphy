@@ -1,6 +1,6 @@
 var topics = ["angry", "amazed", "awkward", "baffled", "buzzed", "cool", "crazy", "cranky", 
-			"eye roll", "flirty", "happy", "laughing", "lol", "nervous", "pumped", 
-			"sad", "savage", "shocked", "speechless", "stunned", "surprised", "uhh"];
+			"eye roll", "flirty", "haha", "happy", "laughing", "lmao", "lol", "nervous", "pumped", 
+			"sad", "sassy", "scared", "shocked", "speechless", "stunned", "surprised", "uhh", "wow"];
 
 //Function for getting the GIFs and dumping the GIF in to the div
 // for each button
@@ -34,6 +34,7 @@ function getGifs() {
 
 			// testing if i can add class to gif
 			emotionImage.addClass("gif");
+			p.addClass("gif");
 
 		// animated gif: emotionImage.attr("src", results[i].images.fixed_height.url);
 		// still gif (fixed_height_still)
@@ -78,6 +79,7 @@ function renderButtons(){
 			a.addClass("emotion");
 			a.attr("data-emotion", topics[i]);
 			a.text(topics[i]);
+			a.addClass("btn btn-info");
 			$("#emotionButtons").append(a);
 			
 		}	
